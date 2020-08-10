@@ -581,7 +581,7 @@
 	align-items: center;
 	margin-bottom: 68px;
 
-	@media (min-width: 992px ) {
+	@media (min-width: 575px ) {
 		display: none;
 	}
 
@@ -782,7 +782,8 @@
 		cursor: pointer;
 		min-width: 160px;
 		min-height: 50px;
-		background-color: #71eeb8;
+		background-color: rgba(255, 255, 255, 0.278);
+		border:2px solid #000;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -792,6 +793,15 @@
 		text-transform: uppercase;
 		letter-spacing: 1.6px;
 		margin-right: 16px;
+		transition: all .2s ease;
+
+		@media (min-width: 992px ) {
+			&:hover {
+				background-color: $mainColor;
+				color: #000000;
+				border:2px solid $mainColor;
+			}
+		}
 	}
 }
 

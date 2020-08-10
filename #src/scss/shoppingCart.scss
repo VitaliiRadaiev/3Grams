@@ -1,0 +1,599 @@
+// ==== BASCET=====================================================
+.bascet {
+	padding: 113px 0 100px;
+
+	@media (max-width: $md3+px ) {
+		padding: 72px 0 80px;
+	}
+	&__body {
+		&.container {
+			max-width: 1200px;
+		}
+	}
+	&__title {
+		text-align: center;
+		color: #000000;
+		font-size: 48px;
+		text-transform: uppercase;
+		letter-spacing: 2.4px;
+		margin-bottom: 78px;
+
+		@media (max-width: $md3+px ) {
+			color: #000000;
+			font-size: 30px;
+			line-height: 35px;
+			letter-spacing: 1.5px;
+			margin-bottom: 36px;
+		}
+
+	}
+	&__btn-continue-mobile {
+		display: block;
+
+		& > a {
+			display: flex;
+			align-items: center;
+			color: #000000;
+			font-size: 16px;
+			line-height: 53px;
+			text-transform: uppercase;
+			letter-spacing: 1.6px;
+
+			& span {
+				margin-right: 15px;
+			}
+		}
+		@media (min-width: 992px ) {
+			display: none;
+		}
+
+		@media (max-width: $md4+px ) {
+			margin-bottom: 21px;
+		}
+	}
+	&__list {}
+}
+
+.list-bascet {
+	&__item {
+		&:not(:first-child):not(:last-child) {
+			& .card-bascet {
+				border-bottom: 1px solid #000;
+			}
+		}
+
+		@media (max-width: $md4+px ) {
+			&:not(:first-child) {
+				& .card-bascet {
+					border-bottom: 1px solid #000;
+				}
+			}
+		}
+	}
+	&__top {
+		padding-bottom: 7px;
+	}
+	&__card {}
+}
+.top-list-bascet {
+	display: none;
+
+	@media (min-width: 992px ) {
+		display: flex;
+	}
+	&__column {
+		&_1 {
+			flex: 0 0 120px;
+		}
+		&_2 {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__subcolumn {
+		&_1 {
+			flex: 1 1 auto;
+		}
+		&_2 {
+			flex: 0 0 360px;
+			display: flex;
+			align-items: center;
+			padding-right: 69px;
+			justify-content: space-between;
+		}
+	}
+	&__title {
+		color: #4a4a4a;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+
+		&_product {
+			padding-right: 15px;
+		}
+		&_quantity {
+			padding-right: 15px;
+		}
+		&_price {}
+	}
+}
+
+.card-bascet {
+	display: flex;
+	align-items: center;
+	padding:20px 0 28px;
+
+	@media (max-width: $md4+px ) {
+		align-items: flex-start;
+		padding:20px 0 20px;
+
+	}
+	&__column {
+		&_1 {
+			flex: 0 0 120px;
+
+			@media (max-width: $md4+px ) {	
+				flex: 0 0 107px;
+			}
+		}
+		&_2 {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+
+			@media (max-width: $md3+px ) {
+				flex-direction: column;
+			}
+
+			@media (max-width: $md4+px ) {
+				align-items: flex-start;
+			}
+		}
+	}
+	&__img {
+		width: 90px;
+		height: 110px;
+		margin-right: 30px;
+		overflow: hidden;
+		//border-radius: 2px;
+
+		@media (max-width: $md4+px ) {	
+			height: 101px;
+			width: 83px;
+			margin-right: 24px;
+		}
+	}
+	&__title {
+		flex: 1 1 auto;
+		min-width: 240px;
+		padding-right: 15px;
+		color: #000000;
+		font-size: 18px;
+		line-height: 23px;
+		text-transform: uppercase;
+		letter-spacing: 1.8px;
+
+		@media (max-width: $md3+px ) {
+			padding-right: 0;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: $md4+px ) {
+			text-align: left;
+			margin-bottom: 13px;
+		}
+	}
+	&__price {
+		flex: 0 0 210px;
+		color: #000000;
+		font-size: 24px;
+		text-transform: uppercase;
+		letter-spacing: 2.4px;
+		padding-right: 15px;
+
+		@media (max-width: $md2+px ) {
+			flex: 0 0 160px;
+			font-size: 20px;
+		}
+
+		@media (max-width: $md3+px ) {
+			order: 1;
+			flex: 0 1 auto;
+			font-size: 18px;
+			padding-right: 0;
+		}
+	}
+	&__interactive {
+		flex: 0 0 360px;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: $md2+px ) {
+			flex: 0 0 170px;
+		}
+
+		@media (max-width: $md3+px ) {
+			flex: 0 1 auto;
+			margin-bottom: 28px;
+		}
+	}
+	&__plus-btn {
+		flex: 0 0 auto;
+		width: 16px;
+		height: 16px;
+		position: relative;
+		cursor: pointer;
+
+		&:before, &:after {
+			position: absolute;
+			content: '';
+			background: #000;
+		}
+
+		&:before {
+			width: 100%;
+			height: 2px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&:after {
+			width: 2px;
+			height: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__quantity {
+		flex: 0 0 auto;
+		height: 60px;
+		min-width: 60px;
+		padding:10px;
+		background-color: #d1d1d1;
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: #fefefe;
+		font-size: 16px;
+		letter-spacing: 0.4px;
+		margin: 0 8px;
+
+		@media (max-width: $md3+px ) {
+			min-width: 40px;
+			height: 40px;
+			font-size: 11px;
+		}
+	}
+	&__minus-btn {
+		flex: 0 0 auto;
+		width: 16px;
+		height: 16px;
+		position: relative;
+		cursor: pointer;
+
+		&:before {
+			position: absolute;
+			content: '';
+			background: #000;
+			width: 100%;
+			height: 2px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__total-price {
+		flex: 1 1 auto;
+		color: #000000;
+		font-size: 24px;
+		text-transform: uppercase;
+		letter-spacing: 2.4px;
+		padding-right: 15px;
+		min-width: 120px;
+		text-align: right;
+		padding-right: 43px;
+
+		@media (max-width: $md2+px ) {
+			display: none;
+		}
+
+	}
+	&__delete-btn {
+		flex: 0 0 auto;
+		height: 22px;
+		width: 22px;
+		position: relative;
+		cursor: pointer;
+
+		@media (max-width: $md2+px ) {
+			margin-left: auto;
+		}
+
+		@media (max-width: $md3+px ) {
+			margin-left: 28px;
+		}
+
+		&:before, &:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background: #000;
+		}
+
+		&:before {
+			transform: translateY(-50%) rotate(45deg);
+		}
+
+		&:after {
+			transform: translateY(-50%) rotate(-45deg);
+		}
+	}
+}
+
+// ==== AND BASCET =====================================================
+
+
+// ==== bascet__btn-coupon-and-apply-wrap=====================================================
+.bascet {
+	&__btn-coupon-and-apply-wrap {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 13px;
+
+		@media (max-width: $md4+px ) {
+			margin-top: 42px;
+		}
+	}
+	&__btn-coupon {
+		&.btn {
+			width: 100%;
+			max-width: 360px;
+			margin-right: 30px;
+
+			@media (max-width: $md4+px ) {
+				margin-right: 15px;
+			}
+
+			& a {
+				min-width: auto;
+				border-radius: 5px;
+				background-color: #d1d1d1;
+				border:2px solid #d1d1d1;
+				color: #fefefe;
+				font-size: 16px;
+				letter-spacing: 0.4px;
+				text-transform: none;
+			}
+		}
+	}
+	&__btn-apply {
+		&.btn a{
+			min-width: 180px;
+
+			@media (max-width: $md4+px ) {
+				min-width: 165px;
+			}
+		}
+	}
+}
+// ==== AND bascet__btn-coupon-and-apply-wrap =====================================================
+
+
+
+// ==== form-bascet =====================================================
+.bascet {
+	&__form {
+		padding-top: 32px;
+
+		@media (max-width: $md4+px ) {
+			padding-top: 62px;
+			margin: 0 -15px;
+		}
+	}
+}
+.form-bascket {
+	display: flex;
+	flex-wrap: wrap;
+	&__column {
+		&_1 {
+			flex: 1 1 auto;
+			@media (max-width: $md4+px ) {
+				padding: 0 15px;
+			}
+		}
+		&_2 {
+			flex: 0 1 570px;
+
+			@media (max-width: 1100px ) {
+				flex: 0 1 100%;
+			}
+		}
+
+		&_3 {
+			flex: 0 1 100%;
+			display: flex;
+			justify-content: space-between;
+
+			@media (max-width: $md4+px ) {
+				padding: 0 15px;
+			}
+		}
+
+	}
+	&__shipping {
+		padding-right: 55px;
+
+		@media (max-width: $md3+px ) {
+			padding-right: 0;
+		}
+	}
+	&__total-price {}
+	&__sumbit-wrap {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+
+		@media (max-width: $md2+px ) {
+			justify-content: center;
+		}
+	}
+	&__sumbit {
+		cursor: pointer;
+		width: 100%;
+		max-width: 340px;
+		min-height: 50px;
+		background-color: rgba(255, 255, 255, 0.278);
+		border:2px solid #000;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		color: #000000;
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 1.6px;
+		transition: all .2s ease;
+	}
+}
+.shipping-form-bascet {
+	&__title {
+		color: #4a4a4a;
+		font-size: 14px;
+		line-height: 23px;
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+		margin-bottom: 34px;
+	}
+	&__options {
+		& .option {
+			display: flex;
+			margin-bottom: 35px;
+			padding-left: 27px;
+			@media (max-width: $md4+px ) {
+				align-items: flex-start;
+			}
+			&__titel {
+				color: #000000;
+				font-size: 16px;
+				line-height: 21px;
+				letter-spacing: 0.4px;
+				text-transform: none;
+			}
+			&__price {
+				margin-left: auto;
+				padding-left: 20px;
+				color: #000000;
+				font-size: 24px;
+				line-height: 23px;
+				text-transform: uppercase;
+				letter-spacing: 2.4px;
+				min-width: 84px;
+
+				@media (max-width: $md4+px ) {
+					font-size: 18px;
+					line-height: 23px;
+					text-transform: uppercase;
+					letter-spacing: 1.8px;
+					text-align: right;
+				}
+			}
+		}
+	}
+	&__link-change-address {
+		margin-bottom: 55px;
+
+		@media (max-width: $md4+px ) {
+			margin-top: -5px;
+			margin-bottom: 24px;
+		}
+
+		& > a {
+			color: #000;
+			    font-size: 16px;
+			    font-weight: 400;
+			    line-height: 28px;
+			    text-transform: uppercase;
+			    letter-spacing: 1.6px;
+			    display: inline-block;
+			    border-bottom: 1px dashed #71eeb8;
+			    outline: 0;
+		}
+	}
+	&__link-continue-shopping {
+		width: 100%;
+		&.btn>a {
+			min-width: auto;
+			max-width: 340px;
+			width: 100%;
+		}
+
+		@media (max-width: $md2+px ) {
+			display: none;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.total-price-form-bascet {
+	width: 100%;
+	padding-top: 7px;
+	margin-bottom: 50px;
+
+	@media (max-width: $md4+px ) {
+		margin-bottom: 42px;
+
+	}
+	&__block {
+		width: 100%;
+		max-width: 570px;
+		background: #000;
+		border-radius: 5px;
+		padding:25px 35px;
+		color: #fff;
+		margin: 0 auto;
+
+		@media (max-width: $md4+px ) {
+			border-radius: 0px;
+			padding:25px 17px;
+		}
+	}
+	&__tax {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #fff;
+		padding: 25px 0 28px;
+		font-size: 18px;
+		line-height: 23px;
+		text-transform: uppercase;
+		letter-spacing: 1.8px;
+	}
+	&__total {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 23px 0 25px;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 23px;
+		text-transform: uppercase;
+		letter-spacing: 2.4px;
+	}
+}
+
+// ==== AND form-bascet =====================================================

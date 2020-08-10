@@ -44,8 +44,16 @@ body {
 	color: #000;
 	font-size: 14px;
 	font-family: $mainFontFamily;
+	opacity: 0;
+	transition: opacity .8s ease;
+	transition-delay: .5s;
+
 	&.lock {
 		overflow: hidden;
+	}
+
+	&.isload {
+		opacity: 1;
 	}
 
 }
@@ -93,6 +101,7 @@ h6 {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
+	box-shadow: black 0px 0px 10px;
 	&.loaded {
 	}
 }
@@ -142,7 +151,7 @@ h6 {
 	text-transform: uppercase;
 	letter-spacing: 2.2px;
 	font-family: $mainFontFamily;
-
+	
 	@media (max-width: $md3+px ) {
 		font-size: 36px;
 		line-height: calc(45 / 36);
@@ -153,6 +162,14 @@ h6 {
 		letter-spacing: 2px;
 		margin-bottom: 53px;
 	}
+}
+
+@mixin text() {
+	color: #000000;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: calc(23 /16);
+	letter-spacing: 0.4px;
 }
 // and mixin ===========================================================================================================
 .container {
@@ -180,18 +197,28 @@ h6 {
 		display: inline-block;
 		min-width: 150px;
 		min-height: 50px;
-		background-color: $mainColor;
+		background-color: rgba(255, 255, 255, 0.278);
+		border:2px solid #000;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 15px 10px;
 		text-align: center;
-		color: #000000;
+		color: #000;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 18px;
 		text-transform: uppercase;
 		letter-spacing: 1.6px;
+		transition: all .2s ease;
+
+		@media (min-width: 992px ) {
+			&:hover {
+				background-color: $mainColor;
+				color: #000000;
+				border:2px solid $mainColor;
+			}
+		}
 
 		@media (max-width: $md3+px ) {
 			letter-spacing: 1.4px;

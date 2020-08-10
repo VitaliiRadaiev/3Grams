@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+ <html lang="ru">
+ 	<head>
+ 		<meta charset="UTF-8"> 
+ 		<title>3Grams</title>
+ 		<meta name="format-detection" content="telephone=no">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 		<!-- <meta name="robots" content="noindex, nofollow"> -->
+ 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+ 		<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+ 	
+ 		<link rel="stylesheet" href="css/style.min.css">
+ 	</head>
+ 	<body>
+ 		<div class="wrapper">
+ 			@@include('_header2.html')
+ 			<main class="page">
+ 				  <section class="contact">
+ 				  	<div class="contact__body container">
+ 				  		<div class="contact__wrap">
+ 				  			<div class="contact__column contact__column_1">
+ 				  				<div class="contact__map" id="map" data-da="contact__column_2,2,992">
+ 				  				<!-- 	<img src="img/contact/01.jpg" alt="map"> -->
+ 				  				</div>
+ 				  			</div>
+
+ 				  			<div class="contact__column contact__column_2">
+ 				  				<div class="contact__btn-top top-contact-btn">
+ 				  					<div class="top-contact-btn__item top-contact-btn__left active">
+ 				  						3GRAMS INC
+ 				  					</div>
+ 				  					<div class="top-contact-btn__item top-contact-btn__right">
+ 				  						3G WELLNESS LAKE WORTH BEACH
+ 				  					</div>
+ 				  				</div>
+ 				  				<div class="contact__marker-address">
+ 				  					<span>
+ 				  						<img src="img/contact/marker.png" alt="marker">
+ 				  					</span>
+ 				  					3GRAMS INC. <br>
+ 				  					West Palm Beach, Florida 33460
+ 				  				</div>
+
+ 				  				<form action="/" class="contact__form form-contact">
+ 				  					<div class="form-contact__input-item">
+ 				  						<input autocomplete="off" type="text" name="form[]" data-value="Your name" class="form-contact__input input req">
+ 				  					</div>
+ 				  					<div class="form-contact__input-item">
+ 				  						<input autocomplete="off" type="text" name="form[]" data-value="Order number" class="form-contact__input input num req">
+ 				  					</div>
+									<div class="form-contact__input-item">
+										<input autocomplete="off" type="text" name="form[]" data-value="Your email" class="form-contact__input input email req">
+									</div>
+									<div class="form-contact__input-item">
+										<input autocomplete="off" type="text" name="form[]" data-value="Phone number" class="form-contact__input input phone req">
+									</div>
+									
+									<div class="form-contact__input-item">
+										<select name="form[]" class="form-contact-select">
+											<option value="1" selected="selected">Sales</option>
+											<option value="2">Sales</option>
+											<option value="3">Warranty Support</option>
+											<option value="4">Wholesale</option>
+											<option value="5">Other</option>
+										</select>
+									</div>
+
+									<div class="form-contact__input-item">
+										<div class="form-contact__input__textarea-wrap">
+											<textarea name="form[]" data-value="How can we halp? " class="form-contact__input_textarea textarea"></textarea>
+											
+										</div>
+									</div>
+
+									<div class="form-contact__options">
+										<div class="options">
+											<div class="option active">
+												 I would like to be contacted by Email
+												<input type="radio" value="1" name="form[type]">
+											</div>
+											<div class="option ">
+												 I would like to be contacted by Phone
+												<input type="radio" value="2" name="form[type]">
+											</div>
+										</div>
+									</div>
+
+									<div class="form-contact__submit-wrap">
+										<button class="form-contact__submit" type="submit"><span>send</span></button>
+									</div>
+
+ 				  				</form>
+ 				  			</div>
+ 				  		</div>
+ 				  	</div>
+ 				</section>
+ 			</main>
+ 			@@include('_footer.html')
+ 		</div>
+
+ 		<script src="js/libs.min.js"></script>
+	 	<script defer
+			  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOO68VvMAVylwuvlETHCV39TddXj3pqsk&callback=initMap">
+		</script>
+ 		<script src="js/main.min.js"></script>
+ 	</body>
+ </html>

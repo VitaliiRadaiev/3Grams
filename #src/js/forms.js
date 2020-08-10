@@ -11,12 +11,12 @@ function forms(){
 				mss=1;
 			}
 			var opt={
-				cursorcolor:"#9B4E7C",
-				cursorwidth: "12px",
+				cursorcolor:"#000",
+				cursorwidth: "6px",
 				background: "",
 				autohidemode:false,
 				bouncescroll:false,
-				cursorborderradius: "10px",
+				cursorborderradius: "0px",
 				scrollspeed:scs,
 				mousescrollstep:mss,
 				directionlockdeadzone:0,
@@ -293,7 +293,7 @@ function forms(){
 	$.each($('input.phone'), function(index, val) {
 		$(this).attr('type','tel');
 		$(this).focus(function(){
-			$(this).inputmask('+7(999) 999 9999',{clearIncomplete: true,clearMaskOnLostFocus: true,
+			$(this).inputmask('(999) 999 9999',{clearIncomplete: true,clearMaskOnLostFocus: true,
 				"onincomplete": function(){maskclear($(this));}
 			});
 			$(this).addClass('focus');
@@ -316,6 +316,7 @@ function forms(){
 	});
 	$('input.num').focusout(function(event) {
 		maskclear($(this));
+		$(this).removeClass('focus');
 	});
 	/*
 	$.each($('input.date'), function(index, val) {

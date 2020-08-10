@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8"> 
+		<title>3Grams</title>
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+		<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	
+		<link rel="stylesheet" href="css/style.min.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			@@include('_header2.html')
+			<main class="page">
+				<section class="checkout">
+					<div class="checkout__body container">
+						<div class="checkout__title">
+							Checkout
+						</div>
+						<div class="checkout__btn-back-wrap">
+							<div class="checkout__btn-back">
+								<span class="icon-arrow-left"></span>
+								back
+							</div>
+						</div>
+
+
+						<form action="/" class="checkout__form form-checkout">
+							<div class="form-checkout__column form-checkout__column_1">
+								<div class="billing-details">
+									<div class="billing-details__title">
+										BILLING DETAILS
+									</div>
+
+									<div class="billing-details__input-list">
+										<div class="billing-details__input-item">
+											<input autocomplete="off" type="text" name="form[]" data-value="First name" class="billing-details__input input req">
+										</div>
+										<div class="billing-details__input-item">
+											<input autocomplete="off" type="text" name="form[]" data-value="Last name" class="billing-details__input input req">
+										</div>
+										<div class="billing-details__input-item">
+											<input autocomplete="off" type="text" name="form[]" data-value="Company name" class="billing-details__input input req">
+										</div>
+										<div class="billing-details__input-item">
+											<div class="billing-details__lable">Country/Region</div>
+											<select name="form[]" class="billing-details-select">
+												<option value="1" selected="selected">united states(us)</option>
+												<option value="2">Sales</option>
+												<option value="3">Warranty Support</option>
+												<option value="4">Wholesale</option>
+												<option value="5">Other</option>
+											</select>
+										</div>
+										<div class="billing-details__input-item">
+											<div class="billing-details__lable">Country/Region</div>
+											<input autocomplete="off" type="text" name="form[]" data-value="House number and street name" class="billing-details__input input req">
+										</div>
+										<div class="billing-details__input-item">
+											<input autocomplete="off" type="text" name="form[]" data-value="Apartment, suite, unit, etc optional" class="billing-details__input input">
+										</div>
+										<div class="billing-details__input-item">
+											<input autocomplete="off" type="text" name="form[]" data-value="Town/City" class="billing-details__input input req">
+										</div>
+										<div class="billing-details__input-item">
+											<div class="billing-details__lable">State</div>
+											<select name="form[]" class="billing-details-select">
+												<option value="1" selected="selected">Florida</option>
+												<option value="2">Sales</option>
+												<option value="3">Warranty Support</option>
+												<option value="4">Wholesale</option>
+												<option value="5">Other</option>
+												<option value="5">Other</option>
+												<option value="5">Other</option>
+												<option value="5">Other</option>
+											</select>
+										</div>
+										<div class="billing-details__input-item">
+											<input autocomplete="off" type="text" name="form[]" data-value="Zip" class="billing-details__input input num req">
+										</div>
+										<div class="billing-details__input-item">
+											<input autocomplete="off" type="text" name="form[]" data-value="Phone" class="billing-details__input input phone req">
+										</div>
+										<div class="billing-details__input-item">
+											<input autocomplete="off" type="text" name="form[]" data-value="Email address" class="billing-details__input input email req">
+										</div>
+										<div class="billing-details__input-item">
+											<div class="billing-details__input__textarea-wrap">
+												<textarea name="form[]" data-value="How can we halp? " class="billing-details__input_textarea textarea"></textarea>
+												
+											</div>
+										</div>
+										
+
+										<div class="billing-details__checkbox check">
+											Create an account
+											<input class="billing-details__checkbox-create-account" type="checkbox" value="1" name="form[]">
+										</div>
+
+										<div class="billing-details__link-wrap">
+											<a href="" class="billing-details__link-ship-to-different-address">
+												SHIP TO A DIFFERENT ADDRESS?
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+
+
+
+
+
+
+							<div class="form-checkout__column form-checkout__column_2">
+
+
+								<div class="your-order">
+									<div class="your-order__title">
+										your order
+									</div>
+
+									<ul class="your-order__list">
+										<li class="your-order__item">
+											<div class="your-order__card card-bascet">
+												<div class="card-bascet__column card-bascet__column_1">
+													<div class="card-bascet__img ibg">
+														<img src="img/shop-content/01.jpg" alt="img">
+													</div>
+												</div>
+												<div class="card-bascet__column card-bascet__column_2">
+													<div class="card-bascet__title">
+														THE PEAK ATOMIZER
+														<span class="card-bascet__title_quantity">x1</span>
+													</div>
+													<div class="card-bascet__price">
+														$39.99
+													</div>
+													<div class="card-bascet__interactive">
+														<div class="card-bascet__plus-btn"></div>
+														<div class="card-bascet__quantity">
+															1
+														</div>
+														<div class="card-bascet__minus-btn"></div>
+														<div class="card-bascet__total-price">
+															$39.99
+														</div>
+														<div class="card-bascet__delete-btn"></div>
+													</div>
+												</div>
+											</div>
+										</li>
+
+										<li class="your-order__item">
+											<div class="your-order__card card-bascet">
+												<div class="card-bascet__column card-bascet__column_1">
+													<div class="card-bascet__img ibg">
+														<img src="img/shop-content/02.jpg" alt="img">
+													</div>
+												</div>
+												<div class="card-bascet__column card-bascet__column_2">
+													<div class="card-bascet__title">
+														THE PEAK COLORED GLASS
+														<span class="card-bascet__title_quantity">x1</span>
+													</div>
+													<div class="card-bascet__price">
+														$99.99
+													</div>
+													<div class="card-bascet__interactive">
+														<div class="card-bascet__plus-btn"></div>
+														<div class="card-bascet__quantity">
+															1
+														</div>
+														<div class="card-bascet__minus-btn"></div>
+														<div class="card-bascet__total-price">
+															$39.99
+														</div>
+														<div class="card-bascet__delete-btn"></div>
+													</div>
+												</div>
+											</div>
+										</li>
+
+										<li class="your-order__item">
+											<div class="your-order__card card-bascet">
+												<div class="card-bascet__column card-bascet__column_1">
+													<div class="card-bascet__img ibg">
+														<img src="img/shop-content/03.jpg" alt="img">
+													</div>
+												</div>
+												<div class="card-bascet__column card-bascet__column_2">
+													<div class="card-bascet__title">
+														RYAN FITT RECYCLER GLASS 
+														(SHADOW BLACK)
+														<span class="card-bascet__title_quantity">x1</span>
+													</div>
+													<div class="card-bascet__price">
+														$259.99
+													</div>
+													<div class="card-bascet__interactive">
+														<div class="card-bascet__plus-btn"></div>
+														<div class="card-bascet__quantity">
+															1
+														</div>
+														<div class="card-bascet__minus-btn"></div>
+														<div class="card-bascet__total-price">
+															$39.99
+														</div>
+														<div class="card-bascet__delete-btn"></div>
+													</div>
+												</div>
+											</div>
+										</li>
+
+										
+
+
+									</ul>
+
+									<div class="your-order-info">
+										<div class="your-order-info__item">
+											<div class="your-order-info__left your-order-info__left_subtotal">
+												subtotal
+											</div>
+											<div class="your-order-info__right your-order-info__right_subtotal-price">
+												$259.00
+											</div>
+										</div>
+										<div class="your-order-info__item">
+											<div class="your-order-info__left your-order-info__left_free-title">
+												Free Standard Shipping: Shipping to FL
+											</div>
+											<div class="your-order-info__right your-order-info__right_free">
+												FREE
+											</div>
+										</div>
+										<div class="your-order-info__item">
+											<div class="your-order-info__left your-order-info__left_tax">
+												tax
+											</div>
+											<div class="your-order-info__right your-order-info__right_tax-price">
+												$0
+											</div>
+										</div>
+
+										<div class="your-order-info__item your-order-info__item_total">
+											<div class="your-order-info__left your-order-info__left_total">
+												total
+											</div>
+											<div class="your-order-info__right your-order-info__right_total-price">
+												$499.96
+											</div>
+										</div>
+									</div>
+	
+									<div class="your-order__payment-methods">
+										<div class="options">
+											<div class="option active">
+												SEZZLE <span><img src="img/form/sezzle.png" alt="logo"></span>
+												<input type="radio" value="1" name="form[type]">
+											</div>
+											<div class="option ">
+												paypal  <span><img src="img/form/paypal.png" alt="logo"></span>
+												<input type="radio" value="2" name="form[type]">
+											</div>
+											<div class="option ">
+												credit cart  <span><img src="img/form/visa.png" alt="logo"></span>
+												<input type="radio" value="3" name="form[type]">
+											</div>
+										</div>
+									</div>
+
+									<div class="your-order__checkbox your-order__checkbox_i-understand check">
+										I understand due to the nature of these products no returns or exchanges can be accepted. Terms and conditions
+										<input class="your-order__checkbox_iunderstand" type="checkbox" value="1" name="iUnderstend">
+									</div>
+
+									<div class="your-order__submit-wrap">
+										<button class="your-order__submit" type="submit"><span>Place order</span></button>
+									</div>
+							
+								</div>
+							</div>
+						</form>
+
+
+					</div>
+				</section>
+			</main>
+			@@include('_footer.html')
+		</div>
+
+		<script src="js/libs.min.js"></script>
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

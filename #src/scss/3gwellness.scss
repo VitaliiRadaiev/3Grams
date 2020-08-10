@@ -1,0 +1,462 @@
+// ==== ABOUT US BANNER =====================================================
+.aboutUs-banner {
+	min-height: 760px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	@media (max-width: $md3+px ) {
+			min-height: 520px;
+	}	
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+	&__body {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 37px 15px 30px;
+		flex: 1 1 auto;
+		@media (max-width: $md3+px ) {
+			text-align: center;
+			padding: 37px 15px 30px;
+		}	
+	}
+	&__content {
+
+	}
+	&__overtitle {
+		color: #ffffff;
+		font-size: 24px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2.4px;
+		margin-bottom: 10px;
+
+		@media (max-width: $md3+px ) {
+			font-size: 18px;
+			letter-spacing: 1.8px;
+		}	
+	}
+	&__title {
+		color: #ffffff;
+		font-size: 60px;
+		font-weight: 400;
+		line-height: 60px;
+		text-transform: uppercase;
+		letter-spacing: 4.5px;
+		max-width: 925px;
+		margin-bottom: 27px;
+
+		@media (max-width: $md3+px ) {
+			font-size: 36px;
+			line-height: 45px;
+			text-transform: uppercase;
+			letter-spacing: 2.7px;
+		}
+
+		@media (max-width: $md4+px ) {
+			max-width: 334px;
+			margin: 0 auto 24px;
+		}
+	}
+	&__buttons {
+	}
+}
+.container {
+}
+.buttons-aboutUs-banner {
+	max-width: 500px;
+	display: flex;
+
+	@media (max-width: $md3+px ) {
+		max-width: none;
+		justify-content: center;
+	}
+	&__column {
+
+		&:not(:last-child) {
+			margin-right: 30px;
+
+			@media (max-width: $md3+px ) {
+				margin-right: 15px;
+			}
+		}
+
+		@media (max-width: $md3+px ) {
+			flex: 0 0 165px;
+		}
+		&_1 {
+					flex: 0 0 210px;
+		}
+		&_2 {
+					flex: 0 0 200px;
+		}
+	}
+	&__btn {
+		&.btn {
+		}
+		&_callus {
+			min-width: 210px;
+
+			@media (max-width: $md3+px ) {
+				min-width: 165px;
+			}
+		}
+		&_learnmore {
+			min-width: 200px;
+			@media (max-width: $md3+px ) {
+				min-width: 165px;
+			}
+		}
+	}
+}
+.btn {
+}
+
+// ==== AND ABOUT US BANNER =====================================================
+
+
+// ==== ABOTU US =====================================================
+.aboutUs {
+	padding: 115px 0 104px;
+
+	@media (max-width: 575+px ) {
+		padding: 78px 0 70px;
+	}
+	&__body {}
+	&__title {
+		text-align: center;
+		color: #000000;
+		font-size: 48px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 2.4px;
+		margin-bottom: 77px;
+
+		@media (max-width: 575+px ) {
+			font-size: 30px;
+			letter-spacing: 1.5px;
+			margin-bottom: 54px;
+		}
+	}
+	&__cards {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	}
+	&__item {
+		width: 33.3333%;
+		padding: 0 15px;
+
+		@media (max-width: $md2+px ) {
+			width: 50%;
+		}
+	}
+}
+.card-aboutUs {
+	&__inner {
+
+	}
+	&__top {
+		position: relative;
+		height: 0;
+		padding-bottom: 98%;
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		border-radius: 5px;
+	}
+	&__label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		text-align: center;
+		padding:20px 10px 38px;
+	}
+	&__name {
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 23px;
+		text-transform: uppercase;
+		letter-spacing: 1.8px;
+		margin-bottom: 15px;
+	}
+	&__position {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 23px;
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+	}
+	&__text {
+		padding: 10px 0px 20px;
+		color: #000000;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 23px;
+		letter-spacing: 0.4px;
+
+		@media (max-width: 575px ) {
+			padding: 17px 0 0;
+			letter-spacing: 0.3px;
+		}
+
+		&  p {
+			margin: 25px 0;
+		}
+	}
+}
+
+.aboutUs__cards-slider {
+
+	& .slick-track {
+		display: flex;
+		align-items: flex-start;
+	}
+}
+
+
+.aboutUs-cards-controller {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 68px;
+
+	@media (min-width: 575px ) {
+		display: none;
+	}
+
+	@media (max-width: $md3+px ) {
+		margin-bottom: 21px;
+	}
+
+	&__column {
+		&_1 {
+			flex: 0 0 68px;
+			display: flex;
+		}
+		&_2 {
+			flex: 1 1 auto;
+			padding: 10px 25px 10px 23px;
+		}
+		&_3 {
+			flex: 0 0 45px;
+		}
+	}
+	&__arrow {
+		width: 50%;
+		height: 40px;
+		display: flex;
+		cursor: pointer;
+
+		& svg {
+			height: 100%;
+		}
+		&_left {
+
+		}
+		&_right {
+			justify-content: flex-end;
+		}
+	}
+	&__progress-bar {
+		@media (max-width: $md3+px ) {
+			display: none;
+		}
+	}
+	&__numbers {
+		color: #0e0e0e;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 1.6px;
+		display: flex;
+		justify-content: center;
+
+		@media (max-width: $md3+px ) {
+			justify-content: flex-end;
+		}
+	}
+	&__current-slider {}
+	&__of {}
+	&__total-slider {}
+}
+
+// ==== AND ABOTU US =====================================================
+
+
+
+
+
+
+
+
+
+
+// ==== BOOK NOW =====================================================
+.book-now {
+	padding: 0 0 48px;
+	@media (max-width: $md3+px ) {
+		margin-bottom: 2px;
+	}
+	&__body {}
+	&__cards-wrap {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	}
+	&__item {
+		padding: 0 15px;
+		width: 50%;
+		margin-bottom: 20px;
+
+		@media (max-width: $md3+px ) {
+			width: 100%;
+		}
+	}
+}
+
+.card-book-now {
+	&__inner {
+		position: relative;
+		height: 0;
+		padding-bottom: 98.5%;
+		width: 100%;
+		overflow: hidden;
+		border-radius: 5px;
+
+
+		@media (min-width: 992px ) {
+			&:hover {
+
+				& .card-book-now__img img {
+					transform: scale(1.1);
+				}
+			}
+		}
+
+		@media (max-width: 575px ) {
+			height: auto;
+			min-height: 340px;
+			padding-bottom: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+
+		& img {
+			transition: all 1s linear;
+		}
+	}
+	&__text-content {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 2;
+		padding: 10px;
+		width: 100%;
+		text-align: center;
+		min-height: 220px;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: $md3+px ) {
+			bottom: 50%;
+			transform: translateY(50%);
+			min-height: auto;
+		}
+
+		@media (max-width: 575px ) {
+			position: static;
+			transform: translateY(0%);
+
+		}
+	}
+	&__title {
+		color: #ffffff;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 30px;
+		text-transform: uppercase;
+		letter-spacing: 2.4px;
+		margin-bottom: 15px;
+
+	}
+	&__subtitle {
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 23px;
+		letter-spacing: 0.4px;
+		max-width: 440px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		flex: 1 1 auto;
+	}
+	&__btn-wrap {
+		text-align: center;
+		margin-bottom: 29px;
+
+		@media (max-width: $md3+px ) {
+			margin-bottom: 0px;
+		}
+	}
+	&__btn {
+		&.btn > a {
+			min-width: 160px;
+		}
+	}
+}
+
+.card-book-now_form {
+	& .card-book-now__text-content {
+		bottom: 50%;
+		transform: translateY(50%);
+
+		@media (max-width: 575px ) {
+			transform: translateY(0%);
+		}
+	}
+
+	& .info-block__form {
+		padding: 5px 0 48px 0px;
+		@media (max-width: 575px ) {
+			padding: 10px 0 ;
+		}
+	}
+}
+
+// ==== AND BOOK NOW =====================================================
+
+

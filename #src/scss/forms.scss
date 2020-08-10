@@ -21,13 +21,12 @@
 .select{position: relative;cursor: pointer;
 	.select-title{z-index: 1;width: 100%;
 		height: 55px;
-		border: 1px solid #dedede;
 		position: relative;
 		background-color: #fff;
 	}
 	.select-title__arrow{position: absolute;top:0;
 		right: 0px;width:45px;height:100%;
-		background: url('../img/icons/select-arrow.svg') center no-repeat;
+		background: url('../img/form/chevron.png') center no-repeat;
 	}
 	.select-title__value{
 		color: #000;
@@ -40,7 +39,6 @@
 		top: 54px;display: none;overflow: hidden;
 		min-width: 100%;
 		background-color: #fff;
-		border: 1px solid #dedede;
 		padding: 10px 20px 10px 25px;
 	}
 	.select-options-scroll{max-height: 80px;overflow: auto;}
@@ -57,7 +55,6 @@
 //<INPUT (inp+tab)>====================================================================================================
 input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 .input{
-	border-radius: 0 !important;
 	width: 100%;
 	display: block;
 	padding: 0px 20px;
