@@ -1724,7 +1724,6 @@ body.compensate-for-scrollbar {
   width: 100%;
   height: 55px;
   position: relative;
-  background-color: #fff;
 }
 
 .select .select-title__arrow {
@@ -1764,10 +1763,13 @@ body.compensate-for-scrollbar {
 .select .select-options-scroll {
   max-height: 80px;
   overflow: auto;
+  width: 99%;
+  overflow-y: none;
 }
 
 .select .select-options-list {
   padding: 0px 0px 0px 0px;
+  width: 100%;
 }
 
 .select .select-options__value {
@@ -2107,8 +2109,6 @@ textarea.input {
           animation-name: headerAnim;
   -webkit-animation-duration: .6s;
           animation-duration: .6s;
-  -webkit-animation-direction: ease;
-          animation-direction: ease;
 }
 
 @-webkit-keyframes headerAnim {
@@ -2593,9 +2593,10 @@ textarea.input {
 .hover-bascet:before {
   position: absolute;
   content: '';
-  height: 40px;
+  height: 44px;
   width: 100%;
-  top: -40px;
+  top: -43px;
+  left: 0;
 }
 
 .hover-bascet:after {
@@ -4439,7 +4440,6 @@ textarea.input {
           flex: 0 1 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  justify-item: flex-end;
   margin-top: 10px;
 }
 

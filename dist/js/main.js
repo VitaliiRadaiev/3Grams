@@ -1481,14 +1481,13 @@ if(priceSlider) {
 
 	let hoverBascet = document.querySelector('.hover-bascet');
 
-	if(baskedIcon) {
+	if(baskedIcon && document.documentElement.clientWidth >= 992) {
 
 		baskedIcon.addEventListener('mouseover', function() {
-			if(document.documentElement.clientWidth >= 992) {
+			
 				hoverBascet.style.display = 'block';
 				hoverBascet.style.opacity = '1';
 				$(".hover-bascet__list").niceScroll(selectscrolloptions('6px'));
-			}
 		});
 
 		baskedIcon.addEventListener('mouseout', function() {
@@ -1606,6 +1605,40 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 // ==== //  form-checkout ===============
 
 
+
+
+// ====   contact top btn ===============
+{
+	let topContactBtn = document.querySelector('.top-contact-btn');
+	if(topContactBtn) {
+		let leftBtn = document.querySelector('.top-contact-btn__left');
+		let rightBtn = document.querySelector('.top-contact-btn__right');
+		let adress = document.querySelector('.contact__marker-address');
+	
+		leftBtn.addEventListener('click', function() {
+			leftBtn.classList.add('active');
+			rightBtn.classList.remove('active');
+			adress.innerHTML = '<span><img src="img/contact/marker.png" alt="marker"></span>3GRAMS INC. West Palm Beach, Florida 33460';
+		});
+
+		rightBtn.addEventListener('click', function() {
+			leftBtn.classList.remove('active');
+			rightBtn.classList.add('active');
+			adress.innerHTML = '<span><img src="img/contact/marker.png" alt="marker"></span>3G WELLNESS LAKE WORTH BEACH 631 Lucerne Avenue, Suite 205 Lake Worth Beach, Florida 33460';
+
+		});
+		
+	}
+}
+// ==== //  contact top btn ===============
+
+
+
+
+});
+
+
+
 // ==== //  google map ===============
 
 {
@@ -1614,6 +1647,46 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 	if(isMap) {
 		var map;
 
+		let center = {
+			lat: 26.636016,
+			lng: -80.057007,
+		}
+
+		let markerPosition = {
+			lat: 26.613380,
+			lng: -80.061003,
+		}
+
+		let topContactBtn = document.querySelector('.top-contact-btn');
+		if(topContactBtn) {
+			let leftBtn = document.querySelector('.top-contact-btn__left');
+			let rightBtn = document.querySelector('.top-contact-btn__right');
+			let adress = document.querySelector('.contact__marker-address');
+		
+			leftBtn.addEventListener('click', function() {
+				leftBtn.classList.add('active');
+				rightBtn.classList.remove('active');
+				adress.innerHTML = '<span><img src="img/contact/marker.png" alt="marker"></span>3GRAMS INC. West Palm Beach, Florida 33460';
+				center.lat = 26.636016;
+				center.lng = -80.057007;
+				markerPosition.lat = 26.613380;
+				markerPosition.lng = -80.061003;
+				initMap()
+			});
+
+			rightBtn.addEventListener('click', function() {
+				leftBtn.classList.remove('active');
+				rightBtn.classList.add('active');
+				adress.innerHTML = '<span><img src="img/contact/marker.png" alt="marker"></span>3G WELLNESS LAKE WORTH BEACH 631 Lucerne Avenue, Suite 205 Lake Worth Beach, Florida 33460';
+				center.lat = 26.636016;
+				center.lng = -80.057007;
+				markerPosition.lat = 26.636016;
+				markerPosition.lng = -80.057007;
+				initMap()
+			});
+			
+		}
+
 		// Функция initMap которая отрисует карту на странице
 		function initMap() {
 
@@ -1621,9 +1694,10 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 			map = new google.maps.Map(document.getElementById('map'), {
 				// При создании объекта карты необходимо указать его свойства
 				// center - определяем точку на которой карта будет центрироваться
-				center: {lat: 55.760186, lng: 37.618711},
+				center: {lat: center.lat, lng: center.lng},
 				// zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
-				zoom: 18,
+
+				zoom: 14,
 
 				// Добавляем свои стили для отображения карты
 				styles: [
@@ -1792,7 +1866,7 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 			var marker = new google.maps.Marker({
 
 				// Определяем позицию маркера
-			    position: {lat: 55.760186, lng: 37.618711},
+			    position: {lat: markerPosition.lat, lng: markerPosition.lng},
 
 			    // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
 			    map: map,
@@ -1801,66 +1875,10 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 			    title: '',
 
 			    // Укажем свою иконку для маркера
-			    icon: 'http://rightblog.ru/wp-content/uploads/2016/07/theatre_icon.png'
+			    icon: '../img/contact/googlMarker.svg',
 			});
-
-			// Создаем наполнение для информационного окна
-			// var contentString = '<div id="content">'+
-			//       '<div id="siteNotice">'+
-			//       '</div>'+
-			//       '<h1 id="firstHeading" class="firstHeading">Большой театр</h1>'+
-			//       '<div id="bodyContent">'+
-			//       '<p>Госуда́рственный академи́ческий Большо́й теа́тр Росси́и, или просто Большой театр — один из крупнейших' +
-			//       'в России и один из самых значительных в мире театров оперы и балета.</p>'+
-			//       '<p><b>Веб-сайт:</b> <a href="http://www.bolshoi.ru/" target="_blank">bolshoi.ru</a>'+
-			//       '</p>'+
-			//       '</div>'+
-			//       '</div>';
-
-			// // Создаем информационное окно
-			// var infowindow = new google.maps.InfoWindow({
-			//    content: contentString,
-			//    maxWidth: 400
-			// });
-
-			// // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
-			// marker.addListener('click', function() {
-			// 	infowindow.open(map, marker);
-			// });
 
 		}
 	}
 }
 // ==== //  google map ===============
-
-
-
-// ====   contact top btn ===============
-{
-	let topContactBtn = document.querySelector('.top-contact-btn');
-	if(topContactBtn) {
-		let leftBtn = document.querySelector('.top-contact-btn__left');
-		let rightBtn = document.querySelector('.top-contact-btn__right');
-		let adress = document.querySelector('.contact__marker-address');
-	
-		leftBtn.addEventListener('click', function() {
-			leftBtn.classList.add('active');
-			rightBtn.classList.remove('active');
-			adress.innerHTML = '<span><img src="img/contact/marker.png" alt="marker"></span>3GRAMS INC. West Palm Beach, Florida 33460';
-		});
-
-		rightBtn.addEventListener('click', function() {
-			leftBtn.classList.remove('active');
-			rightBtn.classList.add('active');
-			adress.innerHTML = '<span><img src="img/contact/marker.png" alt="marker"></span>3G WELLNESS LAKE WORTH BEACH 631 Lucerne Avenue, Suite 205 Lake Worth Beach, Florida 33460';
-
-		});
-		
-	}
-}
-// ==== //  contact top btn ===============
-
-
-
-
-});

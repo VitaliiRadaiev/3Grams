@@ -14,7 +14,6 @@
 		width: 100%;
 		animation-name: headerAnim;
 		animation-duration: .6s;
-		animation-direction: ease;
 	}
 
 	@keyframes headerAnim {
@@ -572,9 +571,10 @@
 	&:before {
 		position: absolute;
 		content: '';
-		height: 40px;
+		height: 44px;
 		width: 100%;
-		top:-40px;
+		top:-43px;
+		left: 0;
 	}
 
 	&:after {
