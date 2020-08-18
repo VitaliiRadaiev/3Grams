@@ -717,7 +717,7 @@ function searchselectreset() {
 			block.find('input.select-title__value').attr('data-value',select.find('option[selected="selected"]').html());
 		}
 	});
-};
+}; 
 
 $(document).ready(function() {
 	// === Burger Handler =====================================================================
@@ -1485,7 +1485,7 @@ if(priceSlider) {
 
 		baskedIcon.addEventListener('mouseover', function() {
 			
-				hoverBascet.style.display = 'block';
+				hoverBascet.style.display = 'flex';
 				hoverBascet.style.opacity = '1';
 				$(".hover-bascet__list").niceScroll(selectscrolloptions('6px'));
 		});
@@ -1667,11 +1667,13 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 			let leftBtn = document.querySelector('.top-contact-btn__left');
 			let rightBtn = document.querySelector('.top-contact-btn__right');
 			let adress = document.querySelector('.contact__marker-address');
+			let img = document.querySelector('.contact__marker-address > span > img');
+
 		
 			leftBtn.addEventListener('click', function() {
 				leftBtn.classList.add('active');
 				rightBtn.classList.remove('active');
-				adress.innerHTML = '<span><img src="img/contact/marker.png" alt="marker"></span>3GRAMS INC. West Palm Beach, Florida 33460';
+				adress.innerHTML = '<span><img src="' + img.src + '" alt="marker"></span>3GRAMS INC. West Palm Beach, Florida 33460';
 				center.lat = 26.636016;
 				center.lng = -80.057007;
 				if(document.documentElement.clientWidth <= 767) {
@@ -1686,7 +1688,7 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 			rightBtn.addEventListener('click', function() {
 				leftBtn.classList.remove('active');
 				rightBtn.classList.add('active');
-				adress.innerHTML = '<span><img src="img/contact/marker.png" alt="marker"></span>3G WELLNESS LAKE WORTH BEACH 631 Lucerne Avenue, Suite 205 Lake Worth Beach, Florida 33460';
+				adress.innerHTML = '<span><img src="' + img.src + '" alt="marker"></span>3G WELLNESS LAKE WORTH BEACH 631 Lucerne Avenue, Suite 205 Lake Worth Beach, Florida 33460';
 				center.lat = 26.636016;
 				center.lng = -80.057007;
 				markerPosition.lat = 26.636016;
@@ -1891,3 +1893,20 @@ let ilterSliderBtn = document.querySelector('.form-contact__submit');
 	}
 }
 // ==== //  google map ===============
+
+
+
+
+// ==== btn close mega menu handler ===============
+{
+	let btn = document.querySelector('.shop-header2-collapse-btn');
+	if(btn) {
+		btn.addEventListener('click', () => {
+			$('.shop-header2__collapse').slideUp(300);
+			$('.shop-header2__collapse').prev().removeClass('active');
+		})
+	}
+}
+// ==== //  btn close mega menu handler ===============
+
+

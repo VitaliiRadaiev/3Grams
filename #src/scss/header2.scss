@@ -314,6 +314,38 @@
 		@media (max-width: $md3+px ) {
 			padding: 7px 0px 21px 3px;
 		}*/
+
+		& .shop-header2-collapse-btn {
+			position: absolute;
+			cursor: pointer;
+			top: 33px;
+			right: 26px;
+			z-index: 5;
+			height: 35px;
+			width: 35px;
+			background: rgba(255, 255, 255, 0.7098039215686275);
+
+			@media (max-width: $md3+px ) {
+				top: 52px;
+			}
+
+			&:before, &:after {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 50%;
+				background: #000;
+				height: 100%;
+				width: 1px;
+			}
+
+			&:before {
+				transform: rotate(45deg);
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
 	}
 
 	&__wrap {
@@ -567,6 +599,7 @@
 	animation-duration: .4s;
 	box-shadow: 0px 0px 5px 0px #a7a7a7;
 	border-radius: 5px;
+	flex-direction: column;
 
 	&:before {
 		position: absolute;
@@ -588,10 +621,11 @@
 		background: #fff;
 	}
 	&__list {
-		height: 361px;
+		max-height: 361px;
 		overflow-y: auto;
 		padding-right: 21px;
 		margin-top: -20px;
+		flex: 1 1 auto;
 
 	}
 	&__item {
@@ -709,14 +743,66 @@
 		min-width: 40px;
 		height: 40px;
 		font-size: 11px;
+		padding: 0;
 	}
 
 	& .card-bascet__delete-btn {
 		margin-left: 28px;
 	}
+
+	& .input-text {
+		text-align: center;
+		color: #fff;
+		height: 100%;
+		width: 100%;
+		background-color: #d1d1d1;
+		border-radius: 5px;
+	}
 }
 
 
+.isEmpty-miniCart {
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 13px;
+	padding-bottom: 60px;
+	display: flex;
+	&__title {
+		text-align: center;
+		font-size: 30px;
+		font-weight: 400;
+		font-family: $mainFontFamily;
+		margin-top: 37px;
+		margin-bottom: 122px;
+		letter-spacing: 1.5px;
+	}
+	&__message {
+		text-align: center;
+		font-family: $mainFontFamily;
+		font-size: 18px;
+		margin-bottom: 126px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1.8px;
+
+		& > p { 
+			margin: 10px 0 15px;
+		}
+	}
+
+	&__btn {
+		&.btn {
+			& > a {
+				max-width: 345px;
+				min-height: 50px;
+				font-size: 13px;
+				font-family: $mainFontFamily;
+				padding: 8px 10px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
 
 
 
@@ -732,7 +818,7 @@
 }
 .search {
 	width: 100%;
-	max-width: 1000px;
+	max-width: 690px;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
@@ -743,18 +829,22 @@
 			flex: 1 1 auto;
 		}
 		&_btn {
-			flex: 0 0 100px;
+			flex: 0 0 30px;
 		}
 	}
 	&__input {
 		height: 50px;
 		color: #000;
-		border: 1px solid black;
+		border-bottom: 1px solid black;
 	}
 	&__btn {
 		height: 50px;
 		width: 100%;
-		
+		background: transparent;
+		border-bottom: 1px solid black;
+		border-top: none;
+		border-left: none;
+		border-right: none;
 	}
 }
 

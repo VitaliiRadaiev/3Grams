@@ -102,11 +102,14 @@ h6 {
 	min-height: 100%;
 	overflow: hidden;
 	box-shadow: black 0px 0px 10px;
+	display: flex;
+	flex-direction: column;
 	&.loaded {
 	}
 }
 //</ОБОЛОЧКА>===========================================================================================================
 .page {
+	flex: 1 1 auto;
 	height: 100%;
 }
 

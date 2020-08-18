@@ -1,5 +1,5 @@
 // ==== MAIN-BANNER =====================================================
-.main-banner {
+.main-banner { 
 	&__body {
 		position: relative;
 		min-height: 760px;
@@ -199,6 +199,11 @@
 // ==== AND MAIN-BANNER =====================================================
 
 
+
+
+
+
+
 // ==== CATEGORY =====================================================
 .category {
 	padding: 120px 0 79px;
@@ -207,6 +212,22 @@
 		padding: 40px 0;
 	}
 	&__body {}
+
+	&__title {
+		text-align: center;
+		color: #000000;
+		font-size: 48px;
+		font-weight: 400;
+		line-height: 53px;
+		text-transform: uppercase;
+		letter-spacing: -0.6px;
+		margin-bottom: 78px;
+
+		@media (max-width: 575px ) {
+			font-size: 30px;
+			letter-spacing: 1.5px;
+		}
+	}
 	&__wrap {
 	}
 }
@@ -780,7 +801,7 @@
 	}
 	&__btn {
 		cursor: pointer;
-		min-width: 160px;
+		max-width: 160px;
 		min-height: 50px;
 		background-color: rgba(255, 255, 255, 0.278);
 		border:2px solid #000;
@@ -802,6 +823,10 @@
 				border:2px solid $mainColor;
 			}
 		}
+	}
+
+	& .mc4wp-form {
+		width: 100%;
 	}
 }
 

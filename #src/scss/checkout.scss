@@ -1,5 +1,5 @@
 .checkout {
-	padding: 114px 0 0px;
+	padding: 114px 0 0px; 
 
 	@media (max-width: $md3+px ) {
 		padding: 77px 0 0px;
@@ -576,3 +576,102 @@
 	}
 }
 
+
+.woocommerce {
+	& .create-account {
+		color: #000;
+	    font-size: 16px;
+	    letter-spacing: .4px;
+	    line-height: 24px;
+	    margin-top: 32px !important;
+	    padding: 0 0 0 37px !important;
+
+	    &.check {
+	    	&:before { 
+	    		width: 24px;
+	    		height: 24px;
+	    		border: 1px solid #000;
+	    	}
+
+	    	& > input {
+	    		display: none;
+	    	}
+	    }
+
+	    &.check.active {
+	    	&:before {
+	    		background: url(../img/form/check.png) center no-repeat;
+	    	}
+	    }
+	}
+
+	& .woocommerce-additional-fields {
+		& .billing-details__input {
+			padding: 18px 10px 10px 20px !important;
+		}
+
+		& textarea[name="order_comments"] {
+			height: 8em;
+			resize: none;
+		}
+	}
+
+	& .woocommerce-account-fields {
+		padding-left: 5px;
+	}
+
+	& .woocommerce-shipping-fields {
+		padding-left: 5px;
+
+		& > h3#ship-to-different-address {
+			margin-top: 21px;
+			color: #000;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 28px;
+			text-transform: uppercase;
+			letter-spacing: 1.6px;
+			display: inline-block;
+			border-bottom: 1px dashed #71eeb8;
+			outline: 0;
+			margin-bottom: 20px;
+
+			& span {
+				cursor: pointer;
+			}
+
+			& input {
+				display: none;
+			}
+		}
+	}
+
+	& .form-row {
+		& select {
+			width: 100%;
+			height: 60px;
+			border-radius: 5px;
+			border: 1px solid #000;
+			color: #000000;
+			text-transform: uppercase;
+			font-size: 16px;
+			line-height: 21px;
+			letter-spacing: .4px;
+			background: transparent;
+			-webkit-appearance: none;
+			background-image: url(../img/form/chevron.png);
+			background-repeat: no-repeat;
+			background-position: right 15px top 50%;
+		}
+	}
+}
+
+.shipping .woocommerce-shipping-methods label {
+    width: 100%;
+}
+
+.wc_payment_method {
+	& label {
+		cursor: pointer;
+	}
+}
