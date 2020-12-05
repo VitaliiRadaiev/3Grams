@@ -415,6 +415,14 @@
 
 		& button {
 			max-width: 170px;
+
+			@media (min-width: 992px ) {
+				&:hover {
+					background-color: $mainColor;
+					color: #000000;
+					border:2px solid $mainColor;
+				}
+			}
 		}
 	}
 } 

@@ -130,7 +130,7 @@
 	}
 	&__item {
 		&:not(firs-shild) {
-			margin-left: 72px;
+			margin-left: 50px;
 
 			@media (max-width: $md3+px ) {
 				margin-left: 0;

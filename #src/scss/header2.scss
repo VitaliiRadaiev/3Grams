@@ -1,5 +1,5 @@
 .header2 {
-	min-height: 110px;
+	min-height: 90px;
 	background-color: #050505;
 	display: flex;
 	flex-direction: column;
@@ -80,7 +80,7 @@
 			}
 		}
 		&_4 {
-			flex: 0 0 187px;
+			flex: 0 0 160px;
 			margin-right: -14px; 
 
 			@media (max-width: $md2+px ) {
@@ -123,6 +123,7 @@
 		}
 	}
 	&__logo {
+		max-width: 160px;
 		& img {
 			width: 100%;
 		}
@@ -168,21 +169,17 @@
 	}
 	&__link {
 		display: inline-block;
-		padding: 15px 16px;
+		padding: 15px 10px;
 		color: #ffffff;
-		font-size: 22px;
+		font-size: 18px;
 		text-transform: uppercase;
 		letter-spacing: 1.65px;
 		transition: all .2s ease;
 
-		@media (max-width: 1100px ) {
-			font-size: 20px;
-		}
-
 		@media (max-width: $md3+px ) {
 			font-size: 13px;
 			letter-spacing: 0.97px;
-			padding: 8px 12px;
+			padding: 8px 10px;
 		}
 
 		@media (max-width: 374px ) {
@@ -524,7 +521,7 @@
 	}
 	&__item {
 		margin: 0 5px;
-
+		max-width: 45px;
 		&.hover {
 			position: relative;
 		}
@@ -589,7 +586,7 @@
 	padding: 60px 9px 0 30px;
 	display: none;
 	position: absolute;
-	top: 80px;
+	top: 70px;
 	right: -59px;
 	height: 540px;
 	width: 510px;
@@ -667,6 +664,12 @@
 	& .nicescroll-cursors {
 		position: absolute !important;
 		left: -2px !important;
+	}
+
+	& .mini-cart {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
 	}
 }
 
@@ -818,7 +821,7 @@
 }
 .search {
 	width: 100%;
-	max-width: 690px;
+	max-width: 690px; 
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
@@ -830,12 +833,15 @@
 		}
 		&_btn {
 			flex: 0 0 30px;
+			outline: none;
 		}
 	}
 	&__input {
 		height: 50px;
 		color: #000;
 		border-bottom: 1px solid black;
+		outline: none;
+		box-shadow: none;
 	}
 	&__btn {
 		height: 50px;
